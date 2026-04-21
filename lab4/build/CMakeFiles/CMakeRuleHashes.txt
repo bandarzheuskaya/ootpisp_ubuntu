@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+2e013909ff7309343f5ead5101a1875c CMakeFiles/ShapeEditor_autogen
+2e013909ff7309343f5ead5101a1875c CMakeFiles/ShapeEditor_autogen_timestamp_deps
+354579fa377151322bdec50e2d5d034b ShapeEditor_autogen/timestamp
