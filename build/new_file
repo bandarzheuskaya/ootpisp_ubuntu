@@ -1,0 +1,206 @@
+{
+    "format": "shape_editor",
+    "nextId": 7,
+    "pageHeight": 3000,
+    "pageWidth": 5000,
+    "shapes": [
+        {
+            "anchorX": 150,
+            "anchorY": 540,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 1,
+            "radius": 80,
+            "sideColors": [
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3
+            ],
+            "type": "Circle"
+        },
+        {
+            "anchorX": 636,
+            "anchorY": 536,
+            "currentScale": 100,
+            "fillColor": "#ff636444",
+            "id": 4,
+            "name": "Шестиугольник",
+            "relVerts": [
+                {
+                    "x": 60,
+                    "y": 0
+                },
+                {
+                    "x": 180,
+                    "y": 0
+                },
+                {
+                    "x": 240,
+                    "y": 90
+                },
+                {
+                    "x": 180,
+                    "y": 180
+                },
+                {
+                    "x": 60,
+                    "y": 180
+                },
+                {
+                    "x": 0,
+                    "y": 90
+                }
+            ],
+            "sideColors": [
+                "#ff4c3064",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                14,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "type": "Hexagon"
+        },
+        {
+            "anchorX": 1100,
+            "anchorY": 500,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 5,
+            "isIsosceles": false,
+            "name": "Трапеция",
+            "relVerts": [
+                {
+                    "x": 50,
+                    "y": 0
+                },
+                {
+                    "x": 210,
+                    "y": 0
+                },
+                {
+                    "x": 260,
+                    "y": 140
+                },
+                {
+                    "x": 0,
+                    "y": 140
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "type": "Trapezoid"
+        },
+        {
+            "anchorX": 478,
+            "anchorY": 637,
+            "children": [
+                {
+                    "anchorX": 368,
+                    "anchorY": 638,
+                    "currentScale": 100,
+                    "fillColor": "#00000000",
+                    "id": 2,
+                    "name": "Прямоугольник",
+                    "relVerts": [
+                        {
+                            "x": 0,
+                            "y": 0
+                        },
+                        {
+                            "x": 220,
+                            "y": 0
+                        },
+                        {
+                            "x": 220,
+                            "y": 150
+                        },
+                        {
+                            "x": 0,
+                            "y": 150
+                        }
+                    ],
+                    "sideColors": [
+                        "#ff000000",
+                        "#ff000000",
+                        "#ff000000",
+                        "#ff000000"
+                    ],
+                    "sideWidths": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "type": "Rectangle"
+                },
+                {
+                    "anchorX": 406,
+                    "anchorY": 486,
+                    "currentScale": 100,
+                    "fillColor": "#00000000",
+                    "id": 3,
+                    "name": "Треугольник",
+                    "relVerts": [
+                        {
+                            "x": 0,
+                            "y": 0
+                        },
+                        {
+                            "x": 180,
+                            "y": 0
+                        },
+                        {
+                            "x": 90,
+                            "y": 156
+                        }
+                    ],
+                    "sideColors": [
+                        "#ff000000",
+                        "#ff000000",
+                        "#ff000000"
+                    ],
+                    "sideWidths": [
+                        3,
+                        3,
+                        3
+                    ],
+                    "type": "Triangle"
+                }
+            ],
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 6,
+            "sideColors": [
+            ],
+            "sideWidths": [
+            ],
+            "type": "Group"
+        }
+    ],
+    "version": 1,
+    "viewOffsetX": 127.27272727272725,
+    "viewOffsetY": -91.27272727272725,
+    "viewScale": 0.9090909090909091
+}
