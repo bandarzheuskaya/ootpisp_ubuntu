@@ -1,0 +1,243 @@
+{
+    "format": "shape_editor",
+    "nextId": 7,
+    "pageHeight": 2200,
+    "pageWidth": 3200,
+    "shapes": [
+        {
+            "anchorX": 250,
+            "anchorY": 1018,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#ffe6f0ff",
+            "id": 1,
+            "radius": 80,
+            "sideColors": [
+                "#ff4d96ff"
+            ],
+            "sideWidths": [
+                4
+            ],
+            "type": "Circle"
+        },
+        {
+            "anchorX": 874,
+            "anchorY": 1159,
+            "currentScale": 100,
+            "fillColor": "#ff60ffb3",
+            "id": 2,
+            "name": "Прямоугольник",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 220,
+                    "y": 0
+                },
+                {
+                    "x": 220,
+                    "y": 150
+                },
+                {
+                    "x": 0,
+                    "y": 150
+                }
+            ],
+            "sideColors": [
+                "#ff2bb673",
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                6,
+                8,
+                2,
+                4
+            ],
+            "type": "Rectangle"
+        },
+        {
+            "anchorX": 1170,
+            "anchorY": 1084.4991668980197,
+            "currentScale": 100,
+            "fillColor": "#fffff5ed",
+            "id": 3,
+            "name": "Треугольник",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 180,
+                    "y": 0
+                },
+                {
+                    "x": 90,
+                    "y": 156
+                }
+            ],
+            "sideColors": [
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                8,
+                2,
+                4
+            ],
+            "type": "Triangle"
+        },
+        {
+            "anchorX": 1452,
+            "anchorY": 1053.5,
+            "currentScale": 100,
+            "fillColor": "#ffe9d7ff",
+            "id": 4,
+            "name": "Шестиугольник",
+            "relVerts": [
+                {
+                    "x": 60,
+                    "y": 0
+                },
+                {
+                    "x": 180,
+                    "y": 0
+                },
+                {
+                    "x": 240,
+                    "y": 90
+                },
+                {
+                    "x": 180,
+                    "y": 180
+                },
+                {
+                    "x": 60,
+                    "y": 180
+                },
+                {
+                    "x": 0,
+                    "y": 90
+                }
+            ],
+            "sideColors": [
+                "#ff9b5de5",
+                "#ffef476f",
+                "#ff118ab2",
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8,
+                2,
+                4
+            ],
+            "type": "Hexagon"
+        },
+        {
+            "anchorX": 1616,
+            "anchorY": 1029,
+            "currentScale": 100,
+            "fillColor": "#ffffcbd8",
+            "id": 5,
+            "isIsosceles": false,
+            "name": "Трапеция",
+            "relVerts": [
+                {
+                    "x": 50,
+                    "y": 0
+                },
+                {
+                    "x": 210,
+                    "y": 0
+                },
+                {
+                    "x": 260,
+                    "y": 140
+                },
+                {
+                    "x": 0,
+                    "y": 140
+                }
+            ],
+            "sideColors": [
+                "#ffef476f",
+                "#ff118ab2",
+                "#ffe85d75",
+                "#ff4d96ff"
+            ],
+            "sideWidths": [
+                4,
+                6,
+                8,
+                2
+            ],
+            "type": "Trapezoid"
+        },
+        {
+            "anchorX": 1218,
+            "anchorY": 1254.5,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 6,
+            "name": "Кастомная фигура",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 100,
+                    "y": 0
+                },
+                {
+                    "x": 150,
+                    "y": 86.60254037844379
+                },
+                {
+                    "x": 100,
+                    "y": 173.20508075688758
+                },
+                {
+                    "x": 0,
+                    "y": 173.20508075688758
+                },
+                {
+                    "x": -50,
+                    "y": 86.60254037844379
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "type": "CustomPolygon"
+        }
+    ],
+    "version": 1,
+    "viewOffsetX": -624,
+    "viewOffsetY": -625.5,
+    "viewScale": 1
+}

@@ -1,0 +1,107 @@
+{
+    "anchorX": 1351.9266569406295,
+    "anchorY": 1324.25,
+    "children": [
+        {
+            "anchorX": 1210,
+            "anchorY": 1362,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Шестиугольник",
+            "fillColor": "#ffffdae1",
+            "isIsoscelesTrapezoid": false,
+            "relVerts": [
+                {
+                    "x": -60.600925212577295,
+                    "y": -91.5
+                },
+                {
+                    "x": 59.399074787422705,
+                    "y": -91.5
+                },
+                {
+                    "x": 119.3990747874227,
+                    "y": -1.5
+                },
+                {
+                    "x": 59.399074787422705,
+                    "y": 88.5
+                },
+                {
+                    "x": -60.600925212577295,
+                    "y": 88.5
+                },
+                {
+                    "x": -120.6009252125773,
+                    "y": -1.5
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8,
+                2,
+                4
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 1482,
+            "anchorY": 1266,
+            "angleEditingEnabled": false,
+            "currentScale": 100,
+            "displayName": "Трапеция",
+            "fillColor": "#ffffdae1",
+            "isIsoscelesTrapezoid": false,
+            "relVerts": [
+                {
+                    "x": -78.93813794662015,
+                    "y": -71
+                },
+                {
+                    "x": 81.06186205337985,
+                    "y": -71
+                },
+                {
+                    "x": 131.06186205337985,
+                    "y": 69
+                },
+                {
+                    "x": -128.93813794662015,
+                    "y": 69
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8
+            ],
+            "trapezoidMode": true,
+            "type": "Polygon"
+        }
+    ],
+    "currentScale": 100,
+    "fillColor": "#00000000",
+    "sideColors": [
+    ],
+    "sideWidths": [
+    ],
+    "type": "Group"
+}

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor
+CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor/lab3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/build
+CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/lab3/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ShapeEditor.dir/depend.make
@@ -71,37 +71,37 @@ include CMakeFiles/ShapeEditor.dir/flags.make
 
 ShapeEditor_autogen/timestamp: /usr/lib/qt5/bin/moc
 ShapeEditor_autogen/timestamp: CMakeFiles/ShapeEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/anastasiya/ShapeEditor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ShapeEditor"
-	/usr/bin/cmake -E cmake_autogen /home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen.dir/AutogenInfo.json Debug
-	/usr/bin/cmake -E touch /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ShapeEditor"
+	/usr/bin/cmake -E cmake_autogen /home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/ShapeEditor_autogen.dir/AutogenInfo.json Debug
+	/usr/bin/cmake -E touch /home/anastasiya/ShapeEditor/lab3/build/ShapeEditor_autogen/timestamp
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o: CMakeFiles/ShapeEditor.dir/flags.make
 CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o: ShapeEditor_autogen/mocs_compilation.cpp
 CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o: CMakeFiles/ShapeEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anastasiya/ShapeEditor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -c /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -c /home/anastasiya/ShapeEditor/lab3/build/ShapeEditor_autogen/mocs_compilation.cpp
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/mocs_compilation.cpp > CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasiya/ShapeEditor/lab3/build/ShapeEditor_autogen/mocs_compilation.cpp > CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/mocs_compilation.cpp -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasiya/ShapeEditor/lab3/build/ShapeEditor_autogen/mocs_compilation.cpp -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o: CMakeFiles/ShapeEditor.dir/flags.make
-CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o: /home/anastasiya/ShapeEditor/ShapeEditor.cpp
+CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o: /home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp
 CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o: CMakeFiles/ShapeEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anastasiya/ShapeEditor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o -MF CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o.d -o CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o -c /home/anastasiya/ShapeEditor/ShapeEditor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o -MF CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o.d -o CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o -c /home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasiya/ShapeEditor/ShapeEditor.cpp > CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp > CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.i
 
 CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasiya/ShapeEditor/ShapeEditor.cpp -o CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp -o CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.s
 
 # Object files for target ShapeEditor
 ShapeEditor_OBJECTS = \
@@ -118,7 +118,7 @@ ShapeEditor: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 ShapeEditor: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 ShapeEditor: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 ShapeEditor: CMakeFiles/ShapeEditor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anastasiya/ShapeEditor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ShapeEditor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ShapeEditor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ShapeEditor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,6 +130,6 @@ CMakeFiles/ShapeEditor.dir/clean:
 .PHONY : CMakeFiles/ShapeEditor.dir/clean
 
 CMakeFiles/ShapeEditor.dir/depend: ShapeEditor_autogen/timestamp
-	cd /home/anastasiya/ShapeEditor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/anastasiya/ShapeEditor/lab3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor/lab3 /home/anastasiya/ShapeEditor/lab3 /home/anastasiya/ShapeEditor/lab3/build /home/anastasiya/ShapeEditor/lab3/build /home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/ShapeEditor.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ShapeEditor.dir/depend
 

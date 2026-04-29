@@ -1,5 +1,6 @@
 CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o: \
- /home/anastasiya/ShapeEditor/ShapeEditor.cpp /usr/include/stdc-predef.h \
+ /home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp \
+ /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \

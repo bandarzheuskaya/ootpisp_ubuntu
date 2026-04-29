@@ -1,14 +1,56 @@
 [
 {
-  "directory": "/home/anastasiya/ShapeEditor/build",
-  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -c /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/mocs_compilation.cpp",
-  "file": "/home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/mocs_compilation.cpp",
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o -c /home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/mocs_compilation.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.o"
 },
 {
-  "directory": "/home/anastasiya/ShapeEditor/build",
-  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o -c /home/anastasiya/ShapeEditor/ShapeEditor.cpp",
-  "file": "/home/anastasiya/ShapeEditor/ShapeEditor.cpp",
-  "output": "CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o"
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/main.cpp.o -c /home/anastasiya/ShapeEditor/lab4/main.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/main.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/main.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/core/GeometryUtils.cpp.o -c /home/anastasiya/ShapeEditor/lab4/core/GeometryUtils.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/core/GeometryUtils.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/core/GeometryUtils.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/shapes/Shape.cpp.o -c /home/anastasiya/ShapeEditor/lab4/shapes/Shape.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/shapes/Shape.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/shapes/Shape.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/shapes/PolygonShape.cpp.o -c /home/anastasiya/ShapeEditor/lab4/shapes/PolygonShape.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/shapes/PolygonShape.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/shapes/PolygonShape.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/shapes/EllipseShape.cpp.o -c /home/anastasiya/ShapeEditor/lab4/shapes/EllipseShape.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/shapes/EllipseShape.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/shapes/EllipseShape.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/shapes/GroupShape.cpp.o -c /home/anastasiya/ShapeEditor/lab4/shapes/GroupShape.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/shapes/GroupShape.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/shapes/GroupShape.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/serialization/EditorJson.cpp.o -c /home/anastasiya/ShapeEditor/lab4/serialization/EditorJson.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/serialization/EditorJson.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/serialization/EditorJson.cpp.o"
+},
+{
+  "directory": "/home/anastasiya/ShapeEditor/lab4/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/anastasiya/ShapeEditor/lab4/build/ShapeEditor_autogen/include -I/home/anastasiya/ShapeEditor/lab4/core -I/home/anastasiya/ShapeEditor/lab4/shapes -I/home/anastasiya/ShapeEditor/lab4/ui -I/home/anastasiya/ShapeEditor/lab4/serialization -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -std=gnu++17 -fPIC -o CMakeFiles/ShapeEditor.dir/ui/MainWindow.cpp.o -c /home/anastasiya/ShapeEditor/lab4/ui/MainWindow.cpp",
+  "file": "/home/anastasiya/ShapeEditor/lab4/ui/MainWindow.cpp",
+  "output": "CMakeFiles/ShapeEditor.dir/ui/MainWindow.cpp.o"
 }
 ]

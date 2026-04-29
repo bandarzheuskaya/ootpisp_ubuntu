@@ -1,0 +1,41 @@
+{
+    "anchorX": 1530,
+    "anchorY": 1080,
+    "angleEditingEnabled": false,
+    "currentScale": 100,
+    "displayName": "Трапеция",
+    "fillColor": "#00000000",
+    "isIsoscelesTrapezoid": false,
+    "relVerts": [
+        {
+            "x": -78.93813794662009,
+            "y": -71
+        },
+        {
+            "x": 81.06186205337991,
+            "y": -71
+        },
+        {
+            "x": 131.0618620533799,
+            "y": 69
+        },
+        {
+            "x": -128.9381379466201,
+            "y": 69
+        }
+    ],
+    "sideColors": [
+        "#ffe85d75",
+        "#ff4d96ff",
+        "#ff2bb673",
+        "#fff4a261"
+    ],
+    "sideWidths": [
+        2,
+        16,
+        60,
+        8
+    ],
+    "trapezoidMode": true,
+    "type": "Polygon"
+}

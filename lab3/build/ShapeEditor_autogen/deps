@@ -1,9 +1,9 @@
 ShapeEditor_autogen/timestamp: \
-	/home/anastasiya/ShapeEditor/CMakeLists.txt \
-	/home/anastasiya/ShapeEditor/ShapeEditor.cpp \
-	/home/anastasiya/ShapeEditor/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake \
-	/home/anastasiya/ShapeEditor/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
-	/home/anastasiya/ShapeEditor/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/anastasiya/ShapeEditor/lab3/CMakeLists.txt \
+	/home/anastasiya/ShapeEditor/lab3/ShapeEditor.cpp \
+	/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/3.28.3/CMakeCCompiler.cmake \
+	/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
+	/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \

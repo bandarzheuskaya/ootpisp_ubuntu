@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor
+CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor/lab4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/build
+CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/lab4/build
 
 # Utility rule file for ShapeEditor_autogen_timestamp_deps.
 
@@ -68,6 +68,7 @@ include CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/ShapeEditor_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
 CMakeFiles/ShapeEditor_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
+CMakeFiles/ShapeEditor_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
 CMakeFiles/ShapeEditor_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 
 ShapeEditor_autogen_timestamp_deps: CMakeFiles/ShapeEditor_autogen_timestamp_deps
@@ -83,6 +84,6 @@ CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/depend:
-	cd /home/anastasiya/ShapeEditor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/anastasiya/ShapeEditor/lab4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor/lab4 /home/anastasiya/ShapeEditor/lab4 /home/anastasiya/ShapeEditor/lab4/build /home/anastasiya/ShapeEditor/lab4/build /home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir/depend
 

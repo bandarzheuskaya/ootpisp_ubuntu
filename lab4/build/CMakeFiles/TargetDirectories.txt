@@ -1,5 +1,5 @@
-/home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor.dir
-/home/anastasiya/ShapeEditor/build/CMakeFiles/edit_cache.dir
-/home/anastasiya/ShapeEditor/build/CMakeFiles/rebuild_cache.dir
-/home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir
-/home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen.dir
+/home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/ShapeEditor.dir
+/home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/edit_cache.dir
+/home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/rebuild_cache.dir
+/home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/ShapeEditor_autogen_timestamp_deps.dir
+/home/anastasiya/ShapeEditor/lab4/build/CMakeFiles/ShapeEditor_autogen.dir

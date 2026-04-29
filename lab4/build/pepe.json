@@ -1,0 +1,127 @@
+{
+    "anchorX": 1387.9266569406295,
+    "anchorY": 1250.5,
+    "children": [
+        {
+            "anchorX": 1378,
+            "anchorY": 1326.5,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "focus1OffsetX": 0,
+            "focus1OffsetY": 0,
+            "focus2OffsetX": 0,
+            "focus2OffsetY": 0,
+            "semiMajor": 195,
+            "sideColors": [
+                "#ff000000"
+            ],
+            "sideWidths": [
+                60
+            ],
+            "type": "Ellipse"
+        },
+        {
+            "anchorX": 1470,
+            "anchorY": 1088,
+            "angleEditingEnabled": false,
+            "currentScale": 100,
+            "displayName": "Трапеция",
+            "fillColor": "#ffffdae1",
+            "isIsoscelesTrapezoid": false,
+            "relVerts": [
+                {
+                    "x": -6.938137946620088,
+                    "y": -117
+                },
+                {
+                    "x": 153.0618620533799,
+                    "y": -117
+                },
+                {
+                    "x": 203.0618620533799,
+                    "y": 23
+                },
+                {
+                    "x": -56.93813794662009,
+                    "y": 23
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8
+            ],
+            "trapezoidMode": true,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 1222,
+            "anchorY": 1042,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Шестиугольник",
+            "fillColor": "#ffffdae1",
+            "isIsoscelesTrapezoid": false,
+            "relVerts": [
+                {
+                    "x": -60.60092521257732,
+                    "y": -91.5
+                },
+                {
+                    "x": 59.39907478742268,
+                    "y": -91.5
+                },
+                {
+                    "x": 119.39907478742268,
+                    "y": -1.5
+                },
+                {
+                    "x": 59.39907478742268,
+                    "y": 88.5
+                },
+                {
+                    "x": -60.60092521257732,
+                    "y": 88.5
+                },
+                {
+                    "x": -120.60092521257732,
+                    "y": -1.5
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8,
+                2,
+                4
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        }
+    ],
+    "currentScale": 100,
+    "fillColor": "#00000000",
+    "sideColors": [
+    ],
+    "sideWidths": [
+    ],
+    "type": "Group"
+}

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor
+CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor/lab3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/build
+CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/lab3/build
 
 # Utility rule file for ShapeEditor_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/ShapeEditor_autogen: ShapeEditor_autogen/timestamp
 
 ShapeEditor_autogen/timestamp: /usr/lib/qt5/bin/moc
 ShapeEditor_autogen/timestamp: CMakeFiles/ShapeEditor_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/anastasiya/ShapeEditor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ShapeEditor"
-	/usr/bin/cmake -E cmake_autogen /home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen.dir/AutogenInfo.json Debug
-	/usr/bin/cmake -E touch /home/anastasiya/ShapeEditor/build/ShapeEditor_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/anastasiya/ShapeEditor/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ShapeEditor"
+	/usr/bin/cmake -E cmake_autogen /home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/ShapeEditor_autogen.dir/AutogenInfo.json Debug
+	/usr/bin/cmake -E touch /home/anastasiya/ShapeEditor/lab3/build/ShapeEditor_autogen/timestamp
 
 ShapeEditor_autogen: CMakeFiles/ShapeEditor_autogen
 ShapeEditor_autogen: ShapeEditor_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/ShapeEditor_autogen.dir/clean:
 .PHONY : CMakeFiles/ShapeEditor_autogen.dir/clean
 
 CMakeFiles/ShapeEditor_autogen.dir/depend:
-	cd /home/anastasiya/ShapeEditor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build /home/anastasiya/ShapeEditor/build/CMakeFiles/ShapeEditor_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/anastasiya/ShapeEditor/lab3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasiya/ShapeEditor/lab3 /home/anastasiya/ShapeEditor/lab3 /home/anastasiya/ShapeEditor/lab3/build /home/anastasiya/ShapeEditor/lab3/build /home/anastasiya/ShapeEditor/lab3/build/CMakeFiles/ShapeEditor_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ShapeEditor_autogen.dir/depend
 

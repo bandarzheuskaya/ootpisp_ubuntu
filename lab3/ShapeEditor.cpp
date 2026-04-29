@@ -2406,106 +2406,163 @@ QWidget* makeGroup(const QString& title, Fn fn) {
 
  QWidget* createLeftPanel() {
     m_leftPanel = new QWidget;
-    m_leftPanel->setMinimumWidth(300);
-    m_leftPanel->setMaximumWidth(300);
+    m_leftPanel->setMinimumWidth(320);
+    m_leftPanel->setMaximumWidth(320);
 
     auto* outer = new QVBoxLayout(m_leftPanel);
     outer->setContentsMargins(8, 8, 8, 8);
-    outer->setSpacing(8);
+    outer->setSpacing(10);
 
     m_createPanelBox = new QWidget;
     auto* createLayout = new QVBoxLayout(m_createPanelBox);
     createLayout->setContentsMargins(0, 0, 0, 0);
-    createLayout->setSpacing(6);
+    createLayout->setSpacing(10);
 
-    createLayout->addWidget(new QLabel("Инструменты"));
+    auto makeColoredGroup = [](const QString& title, const QString& color) {
+        auto* box = new QGroupBox(title);
+        box->setStyleSheet(QString(R"(
+            QGroupBox {
+                background: %1;
+                border: 1px solid #9bc9ee;
+                border-radius: 12px;
+                margin-top: 14px;
+                padding: 10px;
+                font-weight: bold;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 12px;
+                padding: 0 6px;
+                color: #16324d;
+            }
+        )").arg(color));
 
-    auto* addCircleBtn = new QPushButton("Окружность");
-connect(addCircleBtn, &QPushButton::clicked, this, [this]() {
-    createShapeAndSelect(createDefaultShape(new CircleShape()));
-});
-createLayout->addWidget(addCircleBtn);
+        auto* layout = new QVBoxLayout(box);
+        layout->setContentsMargins(8, 14, 8, 8);
+        layout->setSpacing(7);
+        return std::pair<QGroupBox*, QVBoxLayout*>(box, layout);
+    };
 
-auto* addRectBtn = new QPushButton("Прямоугольник");
-connect(addRectBtn, &QPushButton::clicked, this, [this]() {
-    createShapeAndSelect(createDefaultShape(new RectangleShape()));
-});
-createLayout->addWidget(addRectBtn);
+    auto makeButton = [](const QString& text, const QString& color) {
+        auto* btn = new QPushButton(text);
+        btn->setMinimumHeight(38);
+        btn->setStyleSheet(QString(R"(
+            QPushButton {
+                background: %1;
+                color: #102030;
+                border: 1px solid #8fb9d8;
+                border-radius: 8px;
+                padding: 7px 10px;
+                text-align: left;
+            }
+            QPushButton:hover {
+                background: #ffffff;
+            }
+            QPushButton:pressed {
+                background: #cfe8ff;
+            }
+        )").arg(color));
+        return btn;
+    };
 
-auto* addTriangleBtn = new QPushButton("Треугольник");
-connect(addTriangleBtn, &QPushButton::clicked, this, [this]() {
-    createShapeAndSelect(createDefaultShape(new TriangleShape()));
-});
-createLayout->addWidget(addTriangleBtn);
+    auto [basicBox, basicLayout] = makeColoredGroup("Обычные фигуры", "#eef8ff");
 
-auto* addHexBtn = new QPushButton("Шестиугольник");
-connect(addHexBtn, &QPushButton::clicked, this, [this]() {
-    createShapeAndSelect(createDefaultShape(new HexagonShape()));
-});
-createLayout->addWidget(addHexBtn);
+    auto* addCircleBtn = makeButton("Окружность", "#d9efff");
+    connect(addCircleBtn, &QPushButton::clicked, this, [this]() {
+        createShapeAndSelect(createDefaultShape(new CircleShape()));
+    });
+    basicLayout->addWidget(addCircleBtn);
 
-auto* addTrapBtn = new QPushButton("Трапецию");
-connect(addTrapBtn, &QPushButton::clicked, this, [this]() {
-    createShapeAndSelect(createDefaultShape(new TrapezoidShape()));
-});
-createLayout->addWidget(addTrapBtn);
+    auto* addRectBtn = makeButton("Прямоугольник", "#d9efff");
+    connect(addRectBtn, &QPushButton::clicked, this, [this]() {
+        createShapeAndSelect(createDefaultShape(new RectangleShape()));
+    });
+    basicLayout->addWidget(addRectBtn);
 
-    auto* addCustomBySegmentsBtn = new QPushButton("Кастомная фигура");
-connect(addCustomBySegmentsBtn, &QPushButton::clicked, this, [this]() {
-    startCustomShapeBySegments();
-});
-createLayout->addWidget(addCustomBySegmentsBtn);
+    auto* addTriangleBtn = makeButton("Треугольник", "#d9efff");
+    connect(addTriangleBtn, &QPushButton::clicked, this, [this]() {
+        createShapeAndSelect(createDefaultShape(new TriangleShape()));
+    });
+    basicLayout->addWidget(addTriangleBtn);
 
-m_finishCustomBtn = new QPushButton("Замкнуть фигуру");
-m_finishCustomBtn->setVisible(false);
-connect(m_finishCustomBtn, &QPushButton::clicked, this, [this]() {
-    closeCurrentCustomShape();
-});
-createLayout->addWidget(m_finishCustomBtn);
+    auto* addHexBtn = makeButton("Шестиугольник", "#d9efff");
+    connect(addHexBtn, &QPushButton::clicked, this, [this]() {
+        createShapeAndSelect(createDefaultShape(new HexagonShape()));
+    });
+    basicLayout->addWidget(addHexBtn);
 
-    auto* addRegularPolygonBtn = new QPushButton("Правильный многоугольник");
-connect(addRegularPolygonBtn, &QPushButton::clicked, this, [this]() {
-    bool ok = false;
-    int sides = QInputDialog::getInt(
-        this,
-        "Правильный многоугольник",
-        "Введите количество сторон:",
-        5,
-        3,
-        20,
-        1,
-        &ok
-    );
+    auto* addTrapBtn = makeButton("Трапеция", "#d9efff");
+    connect(addTrapBtn, &QPushButton::clicked, this, [this]() {
+        createShapeAndSelect(createDefaultShape(new TrapezoidShape()));
+    });
+    basicLayout->addWidget(addTrapBtn);
 
-    if (!ok) return;
+    createLayout->addWidget(basicBox);
 
-    Shape* poly = createRegularPolygonShape(sides);
-    if (!poly) {
-        QMessageBox::warning(this, "Ошибка", "Не удалось создать многоугольник.");
-        return;
-    }
+    auto [customBox, customLayout] = makeColoredGroup("Кастомные фигуры", "#fff7e8");
 
-    createShapeAndSelect(poly);
-});
-createLayout->addWidget(addRegularPolygonBtn);
+    auto* addCustomBySegmentsBtn = makeButton("Кастомная фигура", "#ffe2ad");
+    connect(addCustomBySegmentsBtn, &QPushButton::clicked, this, [this]() {
+        startCustomShapeBySegments();
+    });
+    customLayout->addWidget(addCustomBySegmentsBtn);
 
-    auto* groupBtn = new QPushButton("Составная фигура");
+    m_finishCustomBtn = makeButton("Замкнуть фигуру", "#ffd18a");
+    m_finishCustomBtn->setVisible(false);
+    connect(m_finishCustomBtn, &QPushButton::clicked, this, [this]() {
+        closeCurrentCustomShape();
+    });
+    customLayout->addWidget(m_finishCustomBtn);
+
+    auto* addRegularPolygonBtn = makeButton("Правильный многоугольник", "#ffe2ad");
+    connect(addRegularPolygonBtn, &QPushButton::clicked, this, [this]() {
+        bool ok = false;
+        int sides = QInputDialog::getInt(
+            this,
+            "Правильный многоугольник",
+            "Введите количество сторон:",
+            5,
+            3,
+            20,
+            1,
+            &ok
+        );
+
+        if (!ok) return;
+
+        Shape* poly = createRegularPolygonShape(sides);
+        if (!poly) {
+            QMessageBox::warning(this, "Ошибка", "Не удалось создать многоугольник.");
+            return;
+        }
+
+        createShapeAndSelect(poly);
+    });
+    customLayout->addWidget(addRegularPolygonBtn);
+
+    createLayout->addWidget(customBox);
+
+    auto [groupBox, groupLayout] = makeColoredGroup("Составные фигуры", "#f3efff");
+
+    auto* groupBtn = makeButton("Создать составную фигуру", "#e4d8ff");
     connect(groupBtn, &QPushButton::clicked, this, [this]() {
         groupSelected();
     });
-    createLayout->addWidget(groupBtn);
+    groupLayout->addWidget(groupBtn);
 
-    auto* addToGroupBtn = new QPushButton("Добавить в составную");
-connect(addToGroupBtn, &QPushButton::clicked, this, [this]() {
-    addSelectedToGroup();
-});
-createLayout->addWidget(addToGroupBtn);
+    auto* addToGroupBtn = makeButton("Добавить в составную", "#e4d8ff");
+    connect(addToGroupBtn, &QPushButton::clicked, this, [this]() {
+        addSelectedToGroup();
+    });
+    groupLayout->addWidget(addToGroupBtn);
 
-    auto* ungroupBtn = new QPushButton("Разгруппировать");
+    auto* ungroupBtn = makeButton("Разгруппировать", "#e4d8ff");
     connect(ungroupBtn, &QPushButton::clicked, this, [this]() {
         ungroupSelected();
     });
-    createLayout->addWidget(ungroupBtn);
+    groupLayout->addWidget(ungroupBtn);
+
+    createLayout->addWidget(groupBox);
 
     createLayout->addStretch();
 

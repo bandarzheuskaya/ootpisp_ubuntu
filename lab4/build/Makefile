@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor
+CMAKE_SOURCE_DIR = /home/anastasiya/ShapeEditor/lab4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/build
+CMAKE_BINARY_DIR = /home/anastasiya/ShapeEditor/lab4/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasiya/ShapeEditor/build/CMakeFiles /home/anastasiya/ShapeEditor/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasiya/ShapeEditor/lab4/build/CMakeFiles /home/anastasiya/ShapeEditor/lab4/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasiya/ShapeEditor/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anastasiya/ShapeEditor/lab4/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,30 +155,6 @@ ShapeEditor_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor_autogen.dir/build.make CMakeFiles/ShapeEditor_autogen.dir/build
 .PHONY : ShapeEditor_autogen/fast
 
-ShapeEditor.o: ShapeEditor.cpp.o
-.PHONY : ShapeEditor.o
-
-# target to build an object file
-ShapeEditor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.o
-.PHONY : ShapeEditor.cpp.o
-
-ShapeEditor.i: ShapeEditor.cpp.i
-.PHONY : ShapeEditor.i
-
-# target to preprocess a source file
-ShapeEditor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.i
-.PHONY : ShapeEditor.cpp.i
-
-ShapeEditor.s: ShapeEditor.cpp.s
-.PHONY : ShapeEditor.s
-
-# target to generate assembly for a file
-ShapeEditor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ShapeEditor.cpp.s
-.PHONY : ShapeEditor.cpp.s
-
 ShapeEditor_autogen/mocs_compilation.o: ShapeEditor_autogen/mocs_compilation.cpp.o
 .PHONY : ShapeEditor_autogen/mocs_compilation.o
 
@@ -203,6 +179,198 @@ ShapeEditor_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ShapeEditor_autogen/mocs_compilation.cpp.s
 .PHONY : ShapeEditor_autogen/mocs_compilation.cpp.s
 
+core/GeometryUtils.o: core/GeometryUtils.cpp.o
+.PHONY : core/GeometryUtils.o
+
+# target to build an object file
+core/GeometryUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/core/GeometryUtils.cpp.o
+.PHONY : core/GeometryUtils.cpp.o
+
+core/GeometryUtils.i: core/GeometryUtils.cpp.i
+.PHONY : core/GeometryUtils.i
+
+# target to preprocess a source file
+core/GeometryUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/core/GeometryUtils.cpp.i
+.PHONY : core/GeometryUtils.cpp.i
+
+core/GeometryUtils.s: core/GeometryUtils.cpp.s
+.PHONY : core/GeometryUtils.s
+
+# target to generate assembly for a file
+core/GeometryUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/core/GeometryUtils.cpp.s
+.PHONY : core/GeometryUtils.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+serialization/EditorJson.o: serialization/EditorJson.cpp.o
+.PHONY : serialization/EditorJson.o
+
+# target to build an object file
+serialization/EditorJson.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/serialization/EditorJson.cpp.o
+.PHONY : serialization/EditorJson.cpp.o
+
+serialization/EditorJson.i: serialization/EditorJson.cpp.i
+.PHONY : serialization/EditorJson.i
+
+# target to preprocess a source file
+serialization/EditorJson.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/serialization/EditorJson.cpp.i
+.PHONY : serialization/EditorJson.cpp.i
+
+serialization/EditorJson.s: serialization/EditorJson.cpp.s
+.PHONY : serialization/EditorJson.s
+
+# target to generate assembly for a file
+serialization/EditorJson.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/serialization/EditorJson.cpp.s
+.PHONY : serialization/EditorJson.cpp.s
+
+shapes/EllipseShape.o: shapes/EllipseShape.cpp.o
+.PHONY : shapes/EllipseShape.o
+
+# target to build an object file
+shapes/EllipseShape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/EllipseShape.cpp.o
+.PHONY : shapes/EllipseShape.cpp.o
+
+shapes/EllipseShape.i: shapes/EllipseShape.cpp.i
+.PHONY : shapes/EllipseShape.i
+
+# target to preprocess a source file
+shapes/EllipseShape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/EllipseShape.cpp.i
+.PHONY : shapes/EllipseShape.cpp.i
+
+shapes/EllipseShape.s: shapes/EllipseShape.cpp.s
+.PHONY : shapes/EllipseShape.s
+
+# target to generate assembly for a file
+shapes/EllipseShape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/EllipseShape.cpp.s
+.PHONY : shapes/EllipseShape.cpp.s
+
+shapes/GroupShape.o: shapes/GroupShape.cpp.o
+.PHONY : shapes/GroupShape.o
+
+# target to build an object file
+shapes/GroupShape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/GroupShape.cpp.o
+.PHONY : shapes/GroupShape.cpp.o
+
+shapes/GroupShape.i: shapes/GroupShape.cpp.i
+.PHONY : shapes/GroupShape.i
+
+# target to preprocess a source file
+shapes/GroupShape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/GroupShape.cpp.i
+.PHONY : shapes/GroupShape.cpp.i
+
+shapes/GroupShape.s: shapes/GroupShape.cpp.s
+.PHONY : shapes/GroupShape.s
+
+# target to generate assembly for a file
+shapes/GroupShape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/GroupShape.cpp.s
+.PHONY : shapes/GroupShape.cpp.s
+
+shapes/PolygonShape.o: shapes/PolygonShape.cpp.o
+.PHONY : shapes/PolygonShape.o
+
+# target to build an object file
+shapes/PolygonShape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/PolygonShape.cpp.o
+.PHONY : shapes/PolygonShape.cpp.o
+
+shapes/PolygonShape.i: shapes/PolygonShape.cpp.i
+.PHONY : shapes/PolygonShape.i
+
+# target to preprocess a source file
+shapes/PolygonShape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/PolygonShape.cpp.i
+.PHONY : shapes/PolygonShape.cpp.i
+
+shapes/PolygonShape.s: shapes/PolygonShape.cpp.s
+.PHONY : shapes/PolygonShape.s
+
+# target to generate assembly for a file
+shapes/PolygonShape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/PolygonShape.cpp.s
+.PHONY : shapes/PolygonShape.cpp.s
+
+shapes/Shape.o: shapes/Shape.cpp.o
+.PHONY : shapes/Shape.o
+
+# target to build an object file
+shapes/Shape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/Shape.cpp.o
+.PHONY : shapes/Shape.cpp.o
+
+shapes/Shape.i: shapes/Shape.cpp.i
+.PHONY : shapes/Shape.i
+
+# target to preprocess a source file
+shapes/Shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/Shape.cpp.i
+.PHONY : shapes/Shape.cpp.i
+
+shapes/Shape.s: shapes/Shape.cpp.s
+.PHONY : shapes/Shape.s
+
+# target to generate assembly for a file
+shapes/Shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/shapes/Shape.cpp.s
+.PHONY : shapes/Shape.cpp.s
+
+ui/MainWindow.o: ui/MainWindow.cpp.o
+.PHONY : ui/MainWindow.o
+
+# target to build an object file
+ui/MainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ui/MainWindow.cpp.o
+.PHONY : ui/MainWindow.cpp.o
+
+ui/MainWindow.i: ui/MainWindow.cpp.i
+.PHONY : ui/MainWindow.i
+
+# target to preprocess a source file
+ui/MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ui/MainWindow.cpp.i
+.PHONY : ui/MainWindow.cpp.i
+
+ui/MainWindow.s: ui/MainWindow.cpp.s
+.PHONY : ui/MainWindow.s
+
+# target to generate assembly for a file
+ui/MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeEditor.dir/build.make CMakeFiles/ShapeEditor.dir/ui/MainWindow.cpp.s
+.PHONY : ui/MainWindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,12 +382,33 @@ help:
 	@echo "... ShapeEditor_autogen"
 	@echo "... ShapeEditor_autogen_timestamp_deps"
 	@echo "... ShapeEditor"
-	@echo "... ShapeEditor.o"
-	@echo "... ShapeEditor.i"
-	@echo "... ShapeEditor.s"
 	@echo "... ShapeEditor_autogen/mocs_compilation.o"
 	@echo "... ShapeEditor_autogen/mocs_compilation.i"
 	@echo "... ShapeEditor_autogen/mocs_compilation.s"
+	@echo "... core/GeometryUtils.o"
+	@echo "... core/GeometryUtils.i"
+	@echo "... core/GeometryUtils.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... serialization/EditorJson.o"
+	@echo "... serialization/EditorJson.i"
+	@echo "... serialization/EditorJson.s"
+	@echo "... shapes/EllipseShape.o"
+	@echo "... shapes/EllipseShape.i"
+	@echo "... shapes/EllipseShape.s"
+	@echo "... shapes/GroupShape.o"
+	@echo "... shapes/GroupShape.i"
+	@echo "... shapes/GroupShape.s"
+	@echo "... shapes/PolygonShape.o"
+	@echo "... shapes/PolygonShape.i"
+	@echo "... shapes/PolygonShape.s"
+	@echo "... shapes/Shape.o"
+	@echo "... shapes/Shape.i"
+	@echo "... shapes/Shape.s"
+	@echo "... ui/MainWindow.o"
+	@echo "... ui/MainWindow.i"
+	@echo "... ui/MainWindow.s"
 .PHONY : help
 
 

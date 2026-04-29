@@ -1,0 +1,11 @@
+{
+  "cmake.configureSettings": {
+    "CMAKE_PREFIX_PATH": "/usr/lib/x86_64-linux-gnu/cmake/Qt5",
+    "CMAKE_BUILD_TYPE": "Debug"
+  },
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  "cmake.generator": "Unix Makefiles",
+  "cmake.configureOnOpen": true,
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
