@@ -1,0 +1,434 @@
+{
+    "format": "shape_editor",
+    "nextId": 11,
+    "pageHeight": 2200,
+    "pageWidth": 3200,
+    "shapes": [
+        {
+            "anchorX": 1494,
+            "anchorY": 1356,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#ffffdae1",
+            "focus1OffsetX": -56.568542494923804,
+            "focus1OffsetY": 0,
+            "focus2OffsetX": 56.568542494923804,
+            "focus2OffsetY": 0,
+            "id": 1,
+            "semiMajor": 90,
+            "sideColors": [
+                "#ffe85d75"
+            ],
+            "sideWidths": [
+                20
+            ],
+            "type": "Ellipse"
+        },
+        {
+            "anchorX": 1202,
+            "anchorY": 1418,
+            "angleEditingEnabled": false,
+            "currentScale": 100,
+            "displayName": "Прямоугольник",
+            "fillColor": "#ffffdae1",
+            "id": 2,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -109,
+                    "y": -76
+                },
+                {
+                    "x": 111,
+                    "y": -76
+                },
+                {
+                    "x": 111,
+                    "y": 74
+                },
+                {
+                    "x": -109,
+                    "y": 74
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261"
+            ],
+            "sideWidths": [
+                12,
+                24,
+                24,
+                8
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 874,
+            "anchorY": 1112,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Треугольник",
+            "fillColor": "#ffffdae1",
+            "id": 3,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -95.52271948961072,
+                    "y": -67.94367484390023
+                },
+                {
+                    "x": 84.57724350076171,
+                    "y": -68.00138850330063
+                },
+                {
+                    "x": -5.4227564992382895,
+                    "y": 87.99861149669937
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673"
+            ],
+            "sideWidths": [
+                20,
+                40,
+                30
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 1210,
+            "anchorY": 1100,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Шестиугольник",
+            "fillColor": "#ffffdae1",
+            "id": 4,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -60.600925212577295,
+                    "y": -91.5
+                },
+                {
+                    "x": 59.399074787422705,
+                    "y": -91.5
+                },
+                {
+                    "x": 118.19729558729705,
+                    "y": -3.302668800188485
+                },
+                {
+                    "x": 58.19729558729705,
+                    "y": 86.69733119981152
+                },
+                {
+                    "x": -61.80270441270295,
+                    "y": 86.69733119981152
+                },
+                {
+                    "x": -121.80270441270295,
+                    "y": -3.302668800188485
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                28,
+                50,
+                26,
+                8,
+                16,
+                4
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 1522,
+            "anchorY": 1105.1999999999998,
+            "angleEditingEnabled": false,
+            "currentScale": 100,
+            "displayName": "Трапеция",
+            "fillColor": "#ffffdae1",
+            "id": 5,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -78.93813794662009,
+                    "y": -71
+                },
+                {
+                    "x": 81.06186205337991,
+                    "y": -71
+                },
+                {
+                    "x": 131.0618620533799,
+                    "y": 69
+                },
+                {
+                    "x": -128.9381379466201,
+                    "y": 69
+                }
+            ],
+            "sideColors": [
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673",
+                "#fff4a261"
+            ],
+            "sideWidths": [
+                28,
+                4,
+                6,
+                8
+            ],
+            "trapezoidMode": true,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 875,
+            "anchorY": 1390.5,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Треугольник",
+            "fillColor": "#ffaa00ff",
+            "id": 6,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -90,
+                    "y": -78.75083310198033
+                },
+                {
+                    "x": 90,
+                    "y": -78.75083310198033
+                },
+                {
+                    "x": 0,
+                    "y": 77.24916689801967
+                }
+            ],
+            "sideColors": [
+                "#ff59c1e7",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                20,
+                18,
+                3
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 1045.6000000000001,
+            "anchorY": 821.1,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Правильный многоугольник",
+            "fillColor": "#ffffaa00",
+            "id": 7,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": 7.34788079488412e-15,
+                    "y": 116.33342391779752
+                },
+                {
+                    "x": -77.13451316238472,
+                    "y": 88.25875709207487
+                },
+                {
+                    "x": -118.17693036146497,
+                    "y": 17.171205237829152
+                },
+                {
+                    "x": -103.92304845413265,
+                    "y": -63.66657608220245
+                },
+                {
+                    "x": -41.04241719908023,
+                    "y": -116.42969057651149
+                },
+                {
+                    "x": 41.04241719908018,
+                    "y": -116.4296905765115
+                },
+                {
+                    "x": 103.92304845413261,
+                    "y": -63.66657608220254
+                },
+                {
+                    "x": 118.17693036146497,
+                    "y": 17.171205237829106
+                },
+                {
+                    "x": 77.13451316238475,
+                    "y": 88.25875709207486
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ffaa55ff",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                18,
+                42,
+                14,
+                14,
+                20,
+                16,
+                3,
+                14,
+                3
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 659,
+            "anchorY": 896.5,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Шестиугольник",
+            "fillColor": "#ffaa5500",
+            "id": 8,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -60,
+                    "y": -90
+                },
+                {
+                    "x": 60,
+                    "y": -90
+                },
+                {
+                    "x": 120,
+                    "y": 0
+                },
+                {
+                    "x": 60,
+                    "y": 90
+                },
+                {
+                    "x": -60,
+                    "y": 90
+                },
+                {
+                    "x": -120,
+                    "y": 0
+                }
+            ],
+            "sideColors": [
+                "#ff642f5a",
+                "#ff000000",
+                "#ffaaffff",
+                "#ff000000",
+                "#ff00ffff",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                16,
+                24,
+                26,
+                12,
+                20,
+                10
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        },
+        {
+            "anchorX": 693,
+            "anchorY": 1524.5,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "focus1OffsetX": -56.568542494923804,
+            "focus1OffsetY": 0,
+            "focus2OffsetX": 56.568542494923804,
+            "focus2OffsetY": 0,
+            "id": 9,
+            "semiMajor": 90,
+            "sideColors": [
+                "#ff000000"
+            ],
+            "sideWidths": [
+                12
+            ],
+            "type": "Ellipse"
+        },
+        {
+            "anchorX": 1393,
+            "anchorY": 892.5,
+            "angleEditingEnabled": true,
+            "currentScale": 100,
+            "displayName": "Треугольник",
+            "fillColor": "#ffefea63",
+            "id": 10,
+            "isIsoscelesTrapezoid": false,
+            "isRectangle": false,
+            "relVerts": [
+                {
+                    "x": -90,
+                    "y": -78.75083310198033
+                },
+                {
+                    "x": 90,
+                    "y": -78.75083310198033
+                },
+                {
+                    "x": 0,
+                    "y": 77.24916689801967
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ffff5500"
+            ],
+            "sideWidths": [
+                3,
+                14,
+                26
+            ],
+            "trapezoidMode": false,
+            "type": "Polygon"
+        }
+    ],
+    "version": 2,
+    "viewOffsetX": -521.0096363636362,
+    "viewOffsetY": -437.0963636363638,
+    "viewScale": 0.9090909090909091
+}

@@ -475,6 +475,38 @@ QWidget* MainWindow::createPropertiesPanel() {
         });
     }));
 
+   m_rotationGroup = makeGroup("Поворот эллипса", [this](QVBoxLayout* l) {
+    auto* row = new QHBoxLayout;
+
+    row->addWidget(new QLabel("Угол наклона:"));
+
+    m_rotationSpin = new QDoubleSpinBox;
+    m_rotationSpin->setRange(0.0, 359.0);
+    m_rotationSpin->setDecimals(0);
+    m_rotationSpin->setSingleStep(5.0);
+    m_rotationSpin->setSuffix("°");
+    m_rotationSpin->setMinimumWidth(120);
+
+    row->addWidget(m_rotationSpin);
+    row->addStretch();
+
+    l->addLayout(row);
+
+    connect(m_rotationSpin, &QDoubleSpinBox::editingFinished, this, [this]() {
+        if (m_updatingUi) return;
+
+        auto* ellipse = dynamic_cast<EllipseShape*>(currentPropertiesShape());
+        if (!ellipse) return;
+
+        ellipse->setRotationDeg(m_rotationSpin->value());
+
+        m_canvas->update();
+        updatePropertiesPanel();
+    });
+});
+
+body->addWidget(m_rotationGroup);
+
     body->addWidget(makeGroup("Заливка", [this](QVBoxLayout* l) {
         m_noFillCheck = new QCheckBox("Без заливки");
         l->addWidget(m_noFillCheck);
@@ -2383,27 +2415,39 @@ void MainWindow::updatePropertiesPanel() {
     m_updatingUi = true;
 
     Shape* target = currentPropertiesShape();
+
     bool showVertices = false;
+    if (auto* poly = dynamic_cast<PolygonShape*>(target)) {
+        showVertices = poly->supportsVerticesEditing();
+    }
 
-if (auto* poly = dynamic_cast<PolygonShape*>(target)) {
-    showVertices = poly->supportsVerticesEditing();
-}
+    if (m_verticesGroup) {
+        m_verticesGroup->setVisible(showVertices);
+    }
 
-if (m_verticesGroup) {
-    m_verticesGroup->setVisible(showVertices);
-}
     if (!target) {
         m_boundsLabel->setText("Фигура не выбрана");
+
         m_anchorX->setValue(0);
         m_anchorY->setValue(0);
         m_anchorInsideX->setValue(0);
         m_anchorInsideY->setValue(0);
+
         m_scaleSpin->setValue(100.0);
+
         m_pendingFill = Qt::transparent;
         m_noFillCheck->setChecked(true);
-
         m_noFillCheck->setEnabled(false);
         m_fillButton->setEnabled(false);
+
+        if (m_rotationGroup) {
+            m_rotationGroup->setVisible(false);
+        }
+
+        if (m_rotationSpin) {
+            m_rotationSpin->setValue(0.0);
+            m_rotationSpin->setEnabled(false);
+        }
 
         updateFillButton();
         rebuildVerticesTable();
@@ -2418,6 +2462,7 @@ if (m_verticesGroup) {
     m_fillButton->setEnabled(true);
 
     Rectangle b = target->boundingBox();
+
     int left = (int)std::round(b.x);
     int top = (int)std::round(b.y + b.height);
     int right = (int)std::round(b.x + b.width);
@@ -2435,13 +2480,31 @@ if (m_verticesGroup) {
 
     m_anchorX->setValue((int)std::round(target->anchor.x));
     m_anchorY->setValue((int)std::round(target->anchor.y));
+
     m_anchorInsideX->setValue((int)std::round(target->anchor.x));
     m_anchorInsideY->setValue((int)std::round(target->anchor.y));
+
     m_scaleSpin->setValue(target->currentScale);
 
     m_pendingFill = target->fillColor;
     m_noFillCheck->setChecked(target->fillColor == Qt::transparent);
     updateFillButton();
+
+    auto* ellipse = dynamic_cast<EllipseShape*>(target);
+
+    if (m_rotationGroup) {
+        m_rotationGroup->setVisible(ellipse != nullptr);
+    }
+
+    if (m_rotationSpin) {
+        if (ellipse) {
+            m_rotationSpin->setEnabled(true);
+            m_rotationSpin->setValue(ellipse->rotationDeg);
+        } else {
+            m_rotationSpin->setEnabled(false);
+            m_rotationSpin->setValue(0.0);
+        }
+    }
 
     rebuildVerticesTable();
     rebuildSidesPanel();

@@ -91,7 +91,8 @@ std::vector<double> PolygonShape::interiorAngles() const {
 }
 
 bool PolygonShape::setAngleAt(int index, double targetDeg) {
-    if (!angleEditingEnabled) return false;
+  
+    if (!angleEditingEnabled || isRectangle) return false;
 
     auto abs = verticesAbs();
     if (!setInternalAngleByMovingCurrentVertex(abs, index, targetDeg)) {
@@ -111,8 +112,38 @@ bool PolygonShape::setAngleAt(int index, double targetDeg) {
 
 bool PolygonShape::setSideLength(int index, double targetLen) {
     if (targetLen <= 1.0) return false;
+    int n = (int)relVerts.size();
+    if (index < 0 || index >= n) return false;
 
-    if (trapezoidMode && relVerts.size() == 4) {
+   
+    if (isRectangle && n == 4) {
+
+        
+        double currentW = std::abs(relVerts[1].x - relVerts[0].x);
+        double currentH = std::abs(relVerts[2].y - relVerts[1].y);
+
+        if (index == 0 || index == 2) { 
+            double deltaHalf = (targetLen - currentW) / 2.0;
+          
+            relVerts[0].x -= deltaHalf;
+            relVerts[3].x -= deltaHalf;
+            relVerts[1].x += deltaHalf;
+            relVerts[2].x += deltaHalf;
+        } 
+        else if (index == 1 || index == 3) { 
+            double deltaHalf = (targetLen - currentH) / 2.0;
+       
+            relVerts[0].y -= deltaHalf;
+            relVerts[1].y -= deltaHalf;
+            relVerts[2].y += deltaHalf;
+            relVerts[3].y += deltaHalf;
+        }
+
+        ensureStyleArrays();
+        return true;
+    }
+
+    if (trapezoidMode && n == 4) {
         double topLeftX = relVerts[0].x;
         double topLeftY = relVerts[0].y;
         double topRightX = relVerts[1].x;
@@ -139,84 +170,47 @@ bool PolygonShape::setSideLength(int index, double targetLen) {
             if (bottomWidth <= 1.0) return false;
             bottomLeftX = center - bottomWidth / 2.0;
             bottomRightX = center + bottomWidth / 2.0;
-        } else if (index == 1) {
+        } else if (index == 1 || index == 3) {
             if (isIsoscelesTrapezoid) {
                 double dx = std::abs((bottomWidth - topWidth) / 2.0);
                 if (targetLen <= dx) return false;
-
                 double newHeight = std::sqrt(targetLen * targetLen - dx * dx);
-                double newTopY = bottomRightY - newHeight;
-                double center = (bottomLeftX + bottomRightX) / 2.0;
-
-                topLeftX = center - topWidth / 2.0;
-                topRightX = center + topWidth / 2.0;
+                double newTopY = (index == 1) ? bottomRightY - newHeight : bottomLeftY - newHeight;
                 topLeftY = newTopY;
                 topRightY = newTopY;
             } else {
-                double vx = topRightX - bottomRightX;
-                double vy = topRightY - bottomRightY;
+             
+                int baseIdx = (index == 1) ? 2 : 3; 
+                int topIdx = (index == 1) ? 1 : 0;
+                double vx = relVerts[topIdx].x - relVerts[baseIdx].x;
+                double vy = relVerts[topIdx].y - relVerts[baseIdx].y;
                 double len = std::sqrt(vx * vx + vy * vy);
                 if (len < 1e-9) return false;
-
-                double ux = vx / len;
-                double uy = vy / len;
-
-                topRightX = bottomRightX + ux * targetLen;
-                topRightY = bottomRightY + uy * targetLen;
-
-                topLeftX = topRightX - topWidth;
-                topLeftY = topRightY;
+                
+                double scale = targetLen / len;
+                if (index == 1) {
+                    topRightX = bottomRightX + vx * scale;
+                    topRightY = bottomRightY + vy * scale;
+                    topLeftX = topRightX - topWidth;
+                    topLeftY = topRightY;
+                } else {
+                    topLeftX = bottomLeftX + vx * scale;
+                    topLeftY = bottomLeftY + vy * scale;
+                    topRightX = topLeftX + topWidth;
+                    topRightY = topLeftY;
+                }
             }
-        } else if (index == 3) {
-            if (isIsoscelesTrapezoid) {
-                double dx = std::abs((bottomWidth - topWidth) / 2.0);
-                if (targetLen <= dx) return false;
-
-                double newHeight = std::sqrt(targetLen * targetLen - dx * dx);
-                double newTopY = bottomLeftY - newHeight;
-                double center = (bottomLeftX + bottomRightX) / 2.0;
-
-                topLeftX = center - topWidth / 2.0;
-                topRightX = center + topWidth / 2.0;
-                topLeftY = newTopY;
-                topRightY = newTopY;
-            } else {
-                double vx = topLeftX - bottomLeftX;
-                double vy = topLeftY - bottomLeftY;
-                double len = std::sqrt(vx * vx + vy * vy);
-                if (len < 1e-9) return false;
-
-                double ux = vx / len;
-                double uy = vy / len;
-
-                topLeftX = bottomLeftX + ux * targetLen;
-                topLeftY = bottomLeftY + uy * targetLen;
-
-                topRightX = topLeftX + topWidth;
-                topRightY = topLeftY;
-            }
-        } else {
-            return false;
         }
 
-        if (topRightX - topLeftX <= 1.0) return false;
-        if (bottomRightX - bottomLeftX <= 1.0) return false;
-
         relVerts = {
-            {topLeftX, topLeftY},
-            {topRightX, topRightY},
-            {bottomRightX, bottomRightY},
-            {bottomLeftX, bottomLeftY}
+            {topLeftX, topLeftY}, {topRightX, topRightY},
+            {bottomRightX, bottomRightY}, {bottomLeftX, bottomLeftY}
         };
-
         ensureStyleArrays();
         return true;
     }
 
     auto abs = verticesAbs();
-    int n = (int)abs.size();
-    if (index < 0 || index >= n) return false;
-
     int next = (index + 1) % n;
     Point a = abs[index];
     Point b = abs[next];
@@ -239,13 +233,10 @@ bool PolygonShape::setSideLength(int index, double targetLen) {
     }
 
     std::vector<Point> rel;
-    rel.reserve(n);
     for (const auto& p : abs) rel.push_back(p - anchor);
     relVerts = rel;
-
     return true;
 }
-
 Rectangle PolygonShape::boundingBox() const {
     auto points = verticesAbs();
     const int n = (int)points.size();
@@ -344,6 +335,7 @@ QJsonObject PolygonShape::save() const {
     obj["relVerts"] = pointsToJson(relVerts);
     obj["angleEditingEnabled"] = angleEditingEnabled;
     obj["trapezoidMode"] = trapezoidMode;
+    obj["isRectangle"] = isRectangle;
     obj["isIsoscelesTrapezoid"] = isIsoscelesTrapezoid;
     return obj;
 }
@@ -356,6 +348,7 @@ void PolygonShape::loadFromJson(const QJsonObject& obj) {
     angleEditingEnabled = obj["angleEditingEnabled"].toBool(true);
     trapezoidMode = obj["trapezoidMode"].toBool(false);
     isIsoscelesTrapezoid = obj["isIsoscelesTrapezoid"].toBool(false);
+    isRectangle = obj["isRectangle"].toBool(false);
 
     const int n = std::max(1, sideCount());
 

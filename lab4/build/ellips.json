@@ -1,0 +1,21 @@
+{
+    "anchorX": 1477.3105999999905,
+    "anchorY": 622.705999999995,
+    "centerOffsetX": 9.322320693172514e-12,
+    "centerOffsetY": 5.002220859751105e-12,
+    "currentScale": 100,
+    "fillColor": "#00000000",
+    "focus1OffsetX": -247.3655190199313,
+    "focus1OffsetY": -247.36551901993127,
+    "focus2OffsetX": 247.3655190199313,
+    "focus2OffsetY": 247.36551901993127,
+    "rotationDeg": 45,
+    "semiMajor": 507.29999999999984,
+    "sideColors": [
+        "#ff000000"
+    ],
+    "sideWidths": [
+        24
+    ],
+    "type": "Ellipse"
+}

@@ -24,7 +24,10 @@ Point EllipseShape::focus2Abs() const {
 }
 
 bool EllipseShape::isVertical() const {
-    return std::abs(focus1Offset.x) < std::abs(focus1Offset.y);
+    double angle = std::fmod(rotationDeg, 180.0);
+    if (angle < 0.0) angle += 180.0;
+
+    return angle > 45.0 && angle < 135.0;
 }
 
 bool EllipseShape::isCircle() const {
@@ -52,35 +55,22 @@ void EllipseShape::setCenterAbsolute(const Point& c) {
 }
 
 void EllipseShape::normalizeGeometry() {
-    Point mid{
-        (focus1Offset.x + focus2Offset.x) * 0.5,
-        (focus1Offset.y + focus2Offset.y) * 0.5
-    };
+    double a = std::max(MIN_SEMI_MAJOR, semiMajor);
+    double c = focalRadius();
 
-    focus1Offset = focus1Offset - mid;
-    focus2Offset = focus2Offset - mid;
-
-    Point d{
-        (focus2Offset.x - focus1Offset.x) * 0.5,
-        (focus2Offset.y - focus1Offset.y) * 0.5
-    };
-
-    if (std::abs(d.x) >= std::abs(d.y)) {
-        d.y = 0.0;
-    } else {
-        d.x = 0.0;
+    if (c > a) {
+        c = a;
     }
 
-    focus1Offset = {-d.x, -d.y};
-    focus2Offset = { d.x,  d.y};
+    double minAllowed = std::sqrt(c * c + MIN_SEMI_MINOR * MIN_SEMI_MINOR);
+    semiMajor = std::max(a, minAllowed);
 
-    double c = std::sqrt(d.x * d.x + d.y * d.y);
+    double rad = rotationRadians();
+    double cosT = std::cos(rad);
+    double sinT = std::sin(rad);
 
-    if (semiMajor < c) {
-        semiMajor = c;
-    }
-
-    semiMajor = std::max(semiMajor, std::max(MIN_SEMI_MAJOR, std::sqrt(c * c + MIN_SEMI_MINOR * MIN_SEMI_MINOR)));
+    focus1Offset = {-c * cosT, -c * sinT};
+    focus2Offset = { c * cosT,  c * sinT};
 
     ensureStyleArrays();
 }
@@ -151,6 +141,15 @@ void EllipseShape::setVerticesRel(const std::vector<Point>& rel) {
     ensureStyleArrays();
 }
 
+void EllipseShape::setSemiMajor(double a) {
+    double c = focalRadius();
+
+    double minAllowed = std::sqrt(c * c + MIN_SEMI_MINOR * MIN_SEMI_MINOR);
+    semiMajor = std::max(a, std::max(MIN_SEMI_MAJOR, minAllowed));
+
+    normalizeGeometry();
+}
+
 int EllipseShape::sideCount() const {
     return 1;
 }
@@ -169,8 +168,12 @@ Rectangle EllipseShape::boundingBox() const {
     double a = std::max(MIN_SEMI_MAJOR, semiMajor);
     double b = semiMinorAxis();
 
-    double halfW = isVertical() ? b : a;
-    double halfH = isVertical() ? a : b;
+    double rad = rotationRadians();
+    double cosT = std::cos(rad);
+    double sinT = std::sin(rad);
+
+    double halfW = std::sqrt(a * a * cosT * cosT + b * b * sinT * sinT);
+    double halfH = std::sqrt(a * a * sinT * sinT + b * b * cosT * cosT);
 
     double stroke = sideWidths.empty() ? 0.0 : sideWidths[0];
     double halfStroke = stroke * 0.5;
@@ -220,6 +223,24 @@ void EllipseShape::scaleUniform(double factor) {
     normalizeGeometry();
 }
 
+double EllipseShape::rotationRadians() const {
+    return rotationDeg * M_PI / 180.0;
+}
+
+void EllipseShape::setRotationDeg(double degrees) {
+    rotationDeg = degrees;
+
+    while (rotationDeg < 0.0) {
+        rotationDeg += 360.0;
+    }
+
+    while (rotationDeg >= 360.0) {
+        rotationDeg -= 360.0;
+    }
+
+    normalizeGeometry();
+}
+
 void EllipseShape::resizeToBoundingBox(const Rectangle& target) {
     Point c{
         target.x + target.width * 0.5,
@@ -255,14 +276,12 @@ void EllipseShape::draw(QPainter& painter) const {
     double a = std::max(MIN_SEMI_MAJOR, semiMajor);
     double b = semiMinorAxis();
 
-    QRectF rect;
-    if (isVertical()) {
-        rect = QRectF(c.x - b, c.y - a, 2.0 * b, 2.0 * a);
-    } else {
-        rect = QRectF(c.x - a, c.y - b, 2.0 * a, 2.0 * b);
-    }
+    painter.translate(c.x, c.y);
+    painter.rotate(rotationDeg);
 
+    QRectF rect(-a, -b, 2.0 * a, 2.0 * b);
     painter.drawEllipse(rect);
+
     painter.restore();
 }
 
@@ -277,10 +296,14 @@ bool EllipseShape::contains(const Point& p) const {
     double dx = p.x - c.x;
     double dy = p.y - c.y;
 
-    double nx = isVertical() ? dx / b : dx / a;
-    double ny = isVertical() ? dy / a : dy / b;
+    double rad = -rotationRadians();
+    double cosT = std::cos(rad);
+    double sinT = std::sin(rad);
 
-    return nx * nx + ny * ny <= 1.0;
+    double localX = dx * cosT - dy * sinT;
+    double localY = dx * sinT + dy * cosT;
+
+    return (localX * localX) / (a * a) + (localY * localY) / (b * b) <= 1.0;
 }
 
 void EllipseShape::setAnchorInside(const Point& newAnchor) {
@@ -294,38 +317,56 @@ void EllipseShape::setFromAbsoluteFoci(const Point& f1, const Point& f2) {
         (f1.x + f2.x) * 0.5,
         (f1.y + f2.y) * 0.5
     };
+
     setCenterAbsolute(c);
 
-    focus1Offset = f1 - c;
-    focus2Offset = f2 - c;
+    Point offset = f2 - c;
+
+    double newC = std::sqrt(offset.x * offset.x + offset.y * offset.y);
+    if (newC < EPS) {
+        focus1Offset = {0.0, 0.0};
+        focus2Offset = {0.0, 0.0};
+        return;
+    }
+
+    rotationDeg = std::atan2(offset.y, offset.x) * 180.0 / M_PI;
+
+    if (rotationDeg < 0.0) {
+        rotationDeg += 360.0;
+    }
+
+    if (semiMajor < newC) {
+        semiMajor = newC;
+    }
+
+    focus1Offset = {-newC * std::cos(rotationRadians()), -newC * std::sin(rotationRadians())};
+    focus2Offset = { newC * std::cos(rotationRadians()),  newC * std::sin(rotationRadians())};
+
     normalizeGeometry();
 }
-
-void EllipseShape::setSemiMajor(double a) {
-    double c = focalRadius();
-    double minAllowed = std::sqrt(c * c + MIN_SEMI_MINOR * MIN_SEMI_MINOR);
-    semiMajor = std::max(a, std::max(MIN_SEMI_MAJOR, minAllowed));
-    normalizeGeometry();
-}
-
 void EllipseShape::setSemiAxes(double a, double b, bool vertical) {
     b = std::max(MIN_SEMI_MINOR, b);
     a = std::max(a, b);
     a = std::max(a, MIN_SEMI_MAJOR);
 
     semiMajor = a;
+
     double c = std::sqrt(std::max(0.0, a * a - b * b));
 
     if (vertical) {
-        focus1Offset = {0.0, -c};
-        focus2Offset = {0.0,  c};
-    } else {
-        focus1Offset = {-c, 0.0};
-        focus2Offset = { c, 0.0};
+        rotationDeg = 90.0;
     }
 
-    normalizeGeometry();
+    double rad = rotationRadians();
+    double cosT = std::cos(rad);
+    double sinT = std::sin(rad);
+
+    focus1Offset = {-c * cosT, -c * sinT};
+    focus2Offset = { c * cosT,  c * sinT};
+
+    ensureStyleArrays();
 }
+
 
 void EllipseShape::setVertical(bool vertical) {
     double c = focalRadius();
@@ -350,6 +391,7 @@ QJsonObject EllipseShape::save() const {
     obj["focus1OffsetY"] = focus1Offset.y;
     obj["focus2OffsetX"] = focus2Offset.x;
     obj["focus2OffsetY"] = focus2Offset.y;
+    obj["rotationDeg"] = rotationDeg;
     obj["semiMajor"] = semiMajor;
     return obj;
 }
@@ -365,6 +407,7 @@ void EllipseShape::loadFromJson(const QJsonObject& obj) {
     focus2Offset.x = obj["focus2OffsetX"].toDouble(30.0);
     focus2Offset.y = obj["focus2OffsetY"].toDouble(0.0);
 
+    rotationDeg = obj["rotationDeg"].toDouble(0.0);
     semiMajor = obj["semiMajor"].toDouble(90.0);
 
     normalizeGeometry();

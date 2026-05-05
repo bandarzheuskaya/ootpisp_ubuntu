@@ -8,9 +8,9 @@ public:
     Point focus1Offset{-30.0, 0.0};
     Point focus2Offset{ 30.0, 0.0};
     Point centerOffset{0.0, 0.0};
-  
+    double rotationDeg = 0.0;
     double semiMajor = 90.0;
-
+    
     EllipseShape() = default;
 
     ShapeKind kind() const override;
@@ -46,6 +46,9 @@ public:
 
     bool isVertical() const;
     bool isCircle() const;
+
+    double rotationRadians() const;
+    void setRotationDeg(double degrees);
 
     double focalRadius() const;     // c
     double semiMinorAxis() const;   // b

@@ -9,6 +9,7 @@ public:
 
     QString displayName;
     std::vector<Point> relVerts;
+    bool isRectangle = false; 
     bool angleEditingEnabled = true;
     bool trapezoidMode = false;
     bool isIsoscelesTrapezoid = false;

@@ -41,14 +41,17 @@ protected:
     void keyPressEvent(QKeyEvent* event) override;
 
 private:
-QWidget* m_verticesGroup = nullptr;
-QPushButton* m_groupBtn = nullptr;
-QPushButton* m_ungroupBtn = nullptr;
-QPushButton* m_addToGroupBtn = nullptr;
+    QDoubleSpinBox* m_rotationSpin = nullptr;
+    QWidget* m_verticesGroup = nullptr;
+    QPushButton* m_groupBtn = nullptr;
+    QPushButton* m_ungroupBtn = nullptr;
+    QPushButton* m_addToGroupBtn = nullptr;
     QWidget* m_canvas = nullptr;
     QWidget* m_propertiesPanel = nullptr;
     QWidget* m_leftPanel = nullptr;
     QWidget* m_shapesDock = nullptr;
+
+    QWidget* m_rotationGroup = nullptr;
 
     QStatusBar* m_statusBar = nullptr;
     QLabel* m_statusLabel = nullptr;

@@ -1,0 +1,327 @@
+{
+    "format": "shape_editor",
+    "nextId": 9,
+    "pageHeight": 2200,
+    "pageWidth": 3200,
+    "shapes": [
+        {
+            "anchorX": 250,
+            "anchorY": 1018,
+            "centerOffsetX": 0,
+            "centerOffsetY": 0,
+            "currentScale": 100,
+            "fillColor": "#ffe6f0ff",
+            "id": 1,
+            "radius": 80,
+            "sideColors": [
+                "#ff4d96ff"
+            ],
+            "sideWidths": [
+                4
+            ],
+            "type": "Circle"
+        },
+        {
+            "anchorX": 570,
+            "anchorY": 1023,
+            "currentScale": 100,
+            "fillColor": "#ff60ffb3",
+            "id": 2,
+            "name": "Прямоугольник",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 220,
+                    "y": 0
+                },
+                {
+                    "x": 220,
+                    "y": 150
+                },
+                {
+                    "x": 0,
+                    "y": 150
+                }
+            ],
+            "sideColors": [
+                "#ff2bb673",
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                6,
+                8,
+                2,
+                4
+            ],
+            "type": "Rectangle"
+        },
+        {
+            "anchorX": 890,
+            "anchorY": 1018.4991668980197,
+            "currentScale": 100,
+            "fillColor": "#fffff5ed",
+            "id": 3,
+            "name": "Треугольник",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 180,
+                    "y": 0
+                },
+                {
+                    "x": 90,
+                    "y": 156
+                }
+            ],
+            "sideColors": [
+                "#fff4a261",
+                "#ff9b5de5",
+                "#ffef476f"
+            ],
+            "sideWidths": [
+                8,
+                2,
+                4
+            ],
+            "type": "Triangle"
+        },
+        {
+            "anchorX": 1998,
+            "anchorY": 1195.5,
+            "currentScale": 100,
+            "fillColor": "#ffe9d7ff",
+            "id": 4,
+            "name": "Шестиугольник",
+            "relVerts": [
+                {
+                    "x": 60,
+                    "y": 0
+                },
+                {
+                    "x": 180,
+                    "y": 0
+                },
+                {
+                    "x": 240,
+                    "y": 90
+                },
+                {
+                    "x": 180,
+                    "y": 180
+                },
+                {
+                    "x": 60,
+                    "y": 180
+                },
+                {
+                    "x": 0,
+                    "y": 90
+                }
+            ],
+            "sideColors": [
+                "#ff9b5de5",
+                "#ffef476f",
+                "#ff118ab2",
+                "#ffe85d75",
+                "#ff4d96ff",
+                "#ff2bb673"
+            ],
+            "sideWidths": [
+                2,
+                4,
+                6,
+                8,
+                2,
+                4
+            ],
+            "type": "Hexagon"
+        },
+        {
+            "anchorX": 1530,
+            "anchorY": 1027,
+            "currentScale": 100,
+            "fillColor": "#ffffcbd8",
+            "id": 5,
+            "isIsosceles": false,
+            "name": "Трапеция",
+            "relVerts": [
+                {
+                    "x": 50,
+                    "y": 0
+                },
+                {
+                    "x": 210,
+                    "y": 0
+                },
+                {
+                    "x": 260,
+                    "y": 140
+                },
+                {
+                    "x": 0,
+                    "y": 140
+                }
+            ],
+            "sideColors": [
+                "#ffef476f",
+                "#ff118ab2",
+                "#ffe85d75",
+                "#ff4d96ff"
+            ],
+            "sideWidths": [
+                4,
+                6,
+                8,
+                2
+            ],
+            "type": "Trapezoid"
+        },
+        {
+            "anchorX": 1128,
+            "anchorY": 1250.5,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 6,
+            "name": "Кастомная фигура",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 100,
+                    "y": 0
+                },
+                {
+                    "x": 50,
+                    "y": 86.60254037844379
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3,
+                3,
+                3
+            ],
+            "type": "CustomPolygon"
+        },
+        {
+            "anchorX": 1376,
+            "anchorY": 1324.5,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 7,
+            "name": "Кастомная фигура",
+            "relVerts": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 100,
+                    "y": 0
+                },
+                {
+                    "x": 160,
+                    "y": 103.92304845413264
+                },
+                {
+                    "x": 110,
+                    "y": 190.52558883257643
+                },
+                {
+                    "x": 10,
+                    "y": 190.52558883257643
+                },
+                {
+                    "x": -40,
+                    "y": 103.92304845413264
+                },
+                {
+                    "x": 10,
+                    "y": 17.32050807568885
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "type": "CustomPolygon"
+        },
+        {
+            "anchorX": 1696.1098622877041,
+            "anchorY": 1327.7819293543785,
+            "currentScale": 100,
+            "fillColor": "#00000000",
+            "id": 8,
+            "name": "Кастомная фигура",
+            "relVerts": [
+                {
+                    "x": 7.34788079488412e-15,
+                    "y": 120
+                },
+                {
+                    "x": -114.12678195541842,
+                    "y": 37.0820393249937
+                },
+                {
+                    "x": -70.53423027509679,
+                    "y": -97.08203932499369
+                },
+                {
+                    "x": 70.53423027509675,
+                    "y": -97.0820393249937
+                },
+                {
+                    "x": 114.12678195541844,
+                    "y": 37.08203932499366
+                }
+            ],
+            "sideColors": [
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000",
+                "#ff000000"
+            ],
+            "sideWidths": [
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            "type": "CustomPolygon"
+        }
+    ],
+    "version": 1,
+    "viewOffsetX": -850,
+    "viewOffsetY": -701.5,
+    "viewScale": 1
+}
